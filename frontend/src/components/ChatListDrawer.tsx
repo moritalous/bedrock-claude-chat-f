@@ -283,10 +283,18 @@ const ChatListDrawer: React.FC<Props> = (props) => {
           className={`lg:visible lg:w-64 ${
             opened ? 'visible w-64' : 'invisible w-0'
           } text-sm  text-white transition-width`}>
+          <div className={`
+              my-2
+              h-10
+          `}>
+            <img className={`
+              mx-auto
+            `} src='https://www.fsi.co.jp/images/common/logo.gif' width={140}></img>
+          </div>
           <div
             className={`${
               opened ? 'w-64' : 'w-0'
-            } fixed top-0 z-50 h-14 bg-aws-squid-ink p-2 transition-width lg:w-64 `}>
+            } fixed top-10 z-50 h-14 bg-aws-squid-ink p-2 transition-width lg:w-64 `}>
             <Button
               className="h-full w-full bg-aws-squid-ink"
               onClick={onClickNewChat}
@@ -295,7 +303,7 @@ const ChatListDrawer: React.FC<Props> = (props) => {
             </Button>
           </div>
 
-          <div className="absolute top-14 w-full overflow-y-auto overflow-x-hidden pb-12">
+          <div className="absolute top-24 w-full overflow-y-auto overflow-x-hidden pb-12">
             {conversations?.map((conversation, idx) => (
               <Item
                 key={idx}
